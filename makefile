@@ -9,7 +9,7 @@ SRC=src/*.cpp
 LDFLAGS =`pkg-config --static --libs glfw3` -lvulkan -std=c++11
 
 build: makebin
-	g++ $(SRC) $(LDFLAGS) -o $(BIN)/$(NAME)-$(VERSION)
+	$(CXX) $(SRC) $(LDFLAGS) -o $(BIN)/$(NAME)-$(VERSION)
 
 
 makebin:
